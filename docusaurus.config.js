@@ -11,20 +11,21 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   trailingSlash: false,
-  title: 'Spite LE Wiki',
-  tagline: 'Official Spite LE Wiki',
+  title: 'Spite LE Docs',
+  tagline: 'Official Spite LE Documentation',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://envy-spite-team.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/SpiteWiki/',
+  baseUrl: '/SpiteDocs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Envy-Spite-Team', // Usually your GitHub org/user name.
-  projectName: 'SpiteWiki', // Usually your repo name.
+  projectName: 'SpiteDocs', // Usually your repo name.
+  deploymentBranch: 'pages-deploy',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -47,7 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Envy-Spite-Team/SpiteWiki',
+            'https://github.com/Envy-Spite-Team/SpiteDocs',
         },
         blog: {
           showReadingTime: true,
@@ -55,10 +56,6 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Envy-Spite-Team/SpiteWiki',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -77,7 +74,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/ens-social.png',
       navbar: {
-        title: 'Spite Wiki',
+        title: 'Spite Docs',
         logo: {
           alt: 'logo',
           src: 'img/logo.png',
@@ -91,7 +88,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/Envy-Spite-Team/SpiteWiki',
+            href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
             label: 'GitHub',
             position: 'right',
           },
@@ -131,7 +128,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/Envy-Spite-Team/SpiteWiki',
+                href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
               },
             ],
           },
