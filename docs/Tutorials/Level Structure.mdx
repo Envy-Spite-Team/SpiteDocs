@@ -1,0 +1,30 @@
+# ULTRAKILL Level Structure
+
+Levels in ULTRAKILL consist of *rooms*. Rooms contain the geometry of the level and the arena
+logic itself. It is highly recommended to build levels this way for organization and ease of
+making arenas. Here is the example of a such hierarchy:
+
+[IMAGE PLACEHOLDER]
+
+## Room Hierarchy
+
+The room has 2 child gameobjects. *Stuff* and *Non-Stuff*. Stuff is for waves and enemies, while
+Non-Stuff is for geometry, lighting, etc. Everything in Non-Stuff is not required to have a
+strict hierarchy, so you can put level geometry in it without a need to organize them.
+
+[IMAGE PLACEHOLDER]
+
+On the other hand, Stuff needs to have a *strict hierarchy* for the arenas to work properly.
+Inside of it, you can create *Wave* gameobjects that will contain the enemies for that wave and
+*Encounters* that can contain waves inside of them. You will learn about them by proceeding
+further into the wiki.
+
+[IMAGE PLACEHOLDER]
+
+## Naming of the rooms
+
+It is considered a good practice to number your rooms according to their order, from start room
+to final room. For example: `1 - Apartments` and `2 - Streets`. This is not required, but it
+helps with organizing when you are making a big level with multiple level creators involved.
+
+[IMAGE PLACEHOLDER]

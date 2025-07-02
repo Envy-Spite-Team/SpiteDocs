@@ -1,0 +1,88 @@
+# Setting up lighting.
+
+## Intro
+
+<b>In this page we will be covering 2 important things about lights, The lights themselves and skyboxes</b>
+
+But before that you must know a *few* things.
+
+1. ULTRAKILL shaders are vertexlit, meaning that lighting is spread by faces, thus the more vertices your object has, the more smoother the lighting will be, at the cost of performance.
+2. Due to the previous point, what you see in the editor will never be the same in the game, you must see for yourself.
+3. Due to how the shaders were coded, If a object is affected by more than 8 lights it will begin to flicker.
+
+<div style={{ textAlign: "center" }}>
+	Heres how lighting looks like the in editor (left) vs in game (right)
+	<img src="https://coolboi21.github.io/Rude-Docs/Tutorials/Beginner/assets/lighting-101-vertexlit-example.png" alt="Lighting in game" width="90%" height="90%" ></img>
+</div>
+
+:::note
+Do note that when creating custom materials or textures, **always set their shader ULTRAKILL/Master!** If you use the standard Unity shader it will look bad.
+:::
+
+## Creating light sources and their different use cases
+
+To create a light source right click in the scene menu, hit light and choose what you need.
+
+<img src="https://coolboi21.github.io/Rude-Docs/Tutorials/Beginner/assets/lighting-101-creating-a-light.png" alt="Creating light" width="70%" height="70%" ></img>
+
+---
+
+1. Point light
+
+<div style={{ textAlign: "center" }}>
+	<figure>
+		<img src="https://coolboi21.github.io/Rude-Docs/Tutorials/Beginner/assets/lighting-101-lightingtypes-point.png" alt="Point light" width="50%" height="50%"></img>
+		<figcaption>This object speads light around itself in a certain radius. This is the usual way of creating lighting in ULTRAKILL.</figcaption>
+	</figure>
+</div>
+
+---
+
+2. Spot light
+
+<div style={{ textAlign: "center" }}>
+	<figure>
+		<img src="https://coolboi21.github.io/Rude-Docs/Tutorials/Beginner/assets/lighting-101-lightingtypes-spot.png" alt="Spot light" width="50%" height="50%"></img>
+		<figcaption>Lights up an area its directed into, just like its real counterpart.</figcaption>
+	</figure>
+</div>
+
+---
+
+3. Directional light
+
+<div style={{ textAlign: "center" }}>
+	<figure>
+		<img src="https://coolboi21.github.io/Rude-Docs/Tutorials/Beginner/assets/lighting-101-lightingtypes-directional.png" alt="Directional light" width="50%" height="50%"></img>
+		<figcaption>Simliar to the sun, it casts its light globally across the entire level, it can be used to light an entire level (might make it look bad) or a simulate a very strong light in one direction.</figcaption>
+	</figure>
+</div>
+
+## Lighting up the level
+
+As it has been said above, ULTRAKILL uses vertexlit shaders. Thus for a high quality lighing, it is recommended to subdivide walls and floor one time. However, depending on the enviroment and atmosphere that you are 
+creating, more or less subdivisions are needed to be made. For example, if there is a single light source in a dark room, you can subdivide the lit floor 2 times, and not subdivide the walls at all.
+
+[IMAGE PLACEHOLDER]
+
+:::warning
+Excessive amount of subdivisions will cause poor performance in your level. Even if it runs fine on your PC, it may lag on lower-end computers.
+:::
+
+## Skybox
+
+To add a skybox from the orginal game, go into `ULTRAKILL Assets/Materials/Skyboxes` and simply drag a material into the scene.
+
+[IMAGE PLACEHOLDER]
+
+In case you want to add a custom skybox, in the project explorer, right lick, click on `Create` and select Material. Set the shader of the material to `Skybox/Panoramic`. Then simply drag the material into the scene.
+
+<div style={{ textAlign: "center" }}>
+	<img src="https://github.com/layzyidiot/e-sw/blob/main/images/skybox.png?raw=true" alt="Shaders for skyboxes" width="30%" height="30%" ></img>
+	<img src="https://github.com/layzyidiot/e-sw/blob/main/images/skybox2.png?raw=true" alt="Shaders for skyboxes" width="32.5%" height="32.5%" ></img>
+</div>
+
+
+:::tip
+You can change how the skybox affects the lighting in the level via `Intensity Multiplier`, setting to 0 disables the skybox from effecting the lighting, This field can be also used to create <b>Fog</b> in your level.
+:::
