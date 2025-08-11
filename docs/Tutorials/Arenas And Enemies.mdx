@@ -1,22 +1,16 @@
+---
+title: Arenas
+sidebar_position: 6
+---
 <h1> Setup a basic arena</h1>
 
+:::warning
+Enemies spawn immediately when activated. You must deactivate the enemies before exporting the level, otherwise they will spawn immediately when the room loads, which in most cases, is not what you want.
 
+*You can also intentionally leave enemies activated*. *For example, `P-2` does this with idols, which are always present and don't have a spawn effect*.
+:::
 
-
-> [!CAUTION]
->Enemies spawn immediately when activated. You must deactivate the enemies before exporting the level, otherwise they will spawn immediately when the room loads, which in most cases, is not what you want.
->
->*You can also intentionally leave enemies activated*. *For example, `P-2` does this with idols, which are always present and don't have a spawn effect*.
-
-> [!TIP]
->It is recommended to use [<span style={{color:"#ADD8E6"}}>Megga__'s Room creator</span>](https://discord.
-> com/channels/1227272001719111750/1227284829423271957/1243585525613592577) or [<span style={{color:"#ADD8E6"}}>Room Creator by 
-> lazyidiot</span>](https://discord.com/channels/1227272001719111750/1245076859365097482) from the discord server as they automatically set up the basic needed arena and waves.
-><img src="https://github.com/layzyidiot/e-sw/blob/main/images/Room%20making.png?raw=true" alt="Megga's room maker" width="65%" 
-> height="65%"></img>
-
-
-# <b>Setup your hierarchy to look something like this.</b>
+# <b>Setup your hierarchy to look something like this</b>
 
 <img src="https://github.com/layzyidiot/e-sw/blob/main/images/1a76e3f8-5149-40c7-ae15-0881c45de244.png?raw=true" alt="Room Hierchy" width="30%" height="30%"></img>
 
@@ -36,12 +30,13 @@ In the Trigger, assign the doors of your room to the `Doors` tab. This will auto
     <img src="https://github.com/layzyidiot/e-sw/blob/main/images/wave.png?raw=true" alt="Trigger Example" width="90%" height="90%" ></img>
 </div>
 
-> [!TIP]
->If you wanna see your triggers and what's behind them, set the material of your cube to Enemy trigger material, just be sure to set the gameobject's layer to `Invisible`
->
->To quickly add enemies to the Next `Enemies` and `Enemies` tab, click on your current wave and hit the lock button in the inspector window. You can now select multiple enemies at once and drag them on top of the list (<b>Note: Drag them on the Next Enemies header, not the size one!</b>)
->
->![Drag and Drop](https://coolboi21.github.io/Rude-Docs/Components/assets/ultrakill-event-drag-drop.gif)
+:::tip
+If you wanna see your triggers and what's behind them, set the material of your cube to Enemy trigger material, just be sure to set the gameobject's layer to `Invisible`
+
+To quickly add enemies to the Next `Enemies` and `Enemies` tab, click on your current wave and hit the lock button in the inspector window. You can now select multiple enemies at once and drag them on top of the list (<b>Note: Drag them on the Next Enemies header, not the size one!</b>)
+
+![Drag and Drop](https://coolboi21.github.io/Rude-Docs/Components/assets/ultrakill-event-drag-drop.gif)
+:::
 
 For every wave until the last, set the `Next Enemies` tab of the `Activate Next Wave` to the next wave's enemies (<b>Note: For StatueFake, enable their activator which is a child of them, dont put the StatueFake itself</b>), and dont forget to also set the enemy count!
 

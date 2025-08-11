@@ -1,0 +1,36 @@
+Rewrite:
+	Checkpoint Setup
+	Arenas And Enemies
+	Setting up MusicManager
+	Object Activator
+	Compiling
+	Screenshake
+	Symbiote
+	EnvyDL
+	Delayed Level Start
+	Custom Terminal Entry
+Write:
+	Information
+	Skulls and Buttons
+	Challenges
+	Tip of the day
+	Custom Scripts
+	Custom Assets
+	Contribution
+
+
+Fix:
+	Website not working
+Add:
+	More/Update images
+	
+
+LATER:
+
+fix:
+
+update:
+	Organization
+	Divide adv guides and components from tutorial
+add:
+	Update tracking in blog section

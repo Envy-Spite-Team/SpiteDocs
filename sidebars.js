@@ -15,11 +15,9 @@
  @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-    // By default, Docusaurus generates a sidebar from the docs folder structure
-    // But you can create a sidebar manually
-    tutorialSidebar: [
+        tutorialSidebar: [
         'intro',
-        'bs',
+        'navmesh-test',
         {
             type: 'category',
             label: 'Setup',
@@ -57,7 +55,7 @@ const sidebars = {
                 'Advanced Tutorials/Tip Of The Day',
                 'Advanced Tutorials/Delayed Level Name',
                 'Advanced Tutorials/Plushies',
-                'Advanced Tutorials/Symbiote(Dual) Enemies',
+                'Advanced Tutorials/Symbiote',
                 'Advanced Tutorials/Components/Components List',
                 'Advanced Tutorials/Components/Slow-Mo',
                 'Advanced Tutorials/Components/Screenshake',
