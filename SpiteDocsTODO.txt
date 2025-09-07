@@ -13,7 +13,6 @@ Write:
 	Information
 	Skulls and Buttons
 	Challenges
-	Tip of the day
 	Custom Scripts
 	Custom Assets
 	Contribution

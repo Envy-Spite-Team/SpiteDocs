@@ -4,7 +4,7 @@
 
 # Beginning
 
-Ultrakill doesnt of course follow it's community in the enemies's names so thats why this section exists for people to know which enemies are named in the editor.
+The ULTRAKILL enemies are located in `ULTRAKILL Assets/Prefabs/Enemies`, and the names of said prefabs in the files are not the same as their names in the terminal entries. On this page, you will find a list of all of the enemies with their name in-game, and their name in the files.
 
 # List
 
@@ -16,21 +16,22 @@ Ultrakill doesnt of course follow it's community in the enemies's names so thats
   | Stray                            | Projectile Zombie                                                       |
   | Schism                           | Super Projectile Zombie                                                 |
   | Malicious Face                   | Spider                                                                  |
-  | SwordMachine Boss                | SwordsMachine                                                           |
-  | SwordMachine                     | SwordsMachineNonboss                                                    |
-  | Cerberus                         | StatueEnemy (or StatueFake that can be also activated for example: 0-5) |
+  | Swordsmachine Boss               | SwordsMachine                                                           |
+  | Swordsmachine                    | SwordsMachineNonboss                                                    |
+  | Cerberus                         | Cerberus                                                                |
   | Drone                            | Drone                                                                   |
   | Soldier                          | ShotgunHusk                                                             |
-  | Street Cleaner                   | Streetcleaner                                                           |
+  | Streetcleaner                    | Streetcleaner                                                           |
   | Something Wicked                 | Wicked                                                                  |
   | Cancerous Rodent                 | Cancerous Rodent                                                        |
   | Very Cancerous Rodent            | Very Cancerous Rodent                                                   |
   | Hideous Mass                     | Mass                                                                    |
-  | Corpse Of King Minos(COKM)       | MinosBoss                                                               |
+  | Corpse Of King Minos             | MinosBoss                                                               |
   | Hand of the Corpse Of King Minos | MinosArm                                                                |
   | Minos Prime                      | MinosPrime                                                              |
   | Sisyphus Prime                   | SisyphusPrime                                                           |
   | Stalker                          | Stalker                                                                 |
+  | Sisyphean Insurrectionist        | Sisyphus                                                                |
   | Sentry                           | Turret                                                                  |
   | Virtue                           | Virtue                                                                  |
   | Idol                             | Idol                                                                    |
@@ -39,20 +40,27 @@ Ultrakill doesnt of course follow it's community in the enemies's names so thats
   | Gabriel 6-2                      | Gabriel 2nd Variant                                                     |
   | Flesh Prison                     | Flesh Prison                                                            |
   | Flesh Panopticon                 | Flesh Prison 2                                                          |
-  | GutterMan                        | Gutterman                                                               |
-  | GutterTank                       | Guttertank                                                              |
+  | Gutterman                        | Gutterman                                                               |
+  | Guttertank                       | Guttertank                                                              |
   | Leviathan (Head)                 | LeviathanHead                                                           |
-  | Leviathan (Tail)                 | LeviathanTailVariant                                                    |
+  | Leviathan (Tail)                 | LeviathanTail Variant                                                   |
   | Mannequin                        | Mannequin                                                               |
-  | Posing Mannequin                 | MannequinPoserWithEnemy                                                 |
   | Minotaur                         | Minotaur                                                                |
   | Mindflayer                       | Mindflayer                                                              |
-  | Mysterious Druid Knight          | Mandalore                                                               |
-  | EarthMover Brain                 | Brain                                                                   |
-  | Mortar                           | CentaurMortar                                                           |
-  | Rocket Launcher                  | CentaurRocketLauncher                                                   |
-  | Tower (That shoots blue orbs)    | CentaurTower                                                            |
+  | Mysterious Druid Knight (& Owl)  | Mandalore                                                               |
+  | Earthmover Brain                 | Brain                                                                   |
+  | Earthmover Mortar                | CentaurMortar                                                           |
+  | Earthmover Rocket Launcher       | CentaurRocketLauncher                                                   |
+  | Earthmover Tower                 | CentaurTower                                                            |
   | V2 1-4                           | V2                                                                      |
   | V2 4-4                           | V2 Green Arm Variant                                                    |
+  | Big Johninator                   | Big Johninator                                                          |
 </div>
 
+## Extras
+
+Enemies like Cerberus and the Mannequin have extra prefabs for the variants that are decoration and stay idle until activated. In this example, Cerberus gets up from the pedestal, and the Mannequin leave their fashion poses to sprint towards your face.
+
+For Cerberus, their decoration variant is `CerberusStatue`. To bring it to life, activate the `StatueActivator` child inside the object. This will play the animation of the Cerberus getting up from the pedestal and spawn the enemy.
+
+For Mannequins, their decoration variant is `MannequinPoserWithEnemy`. To bring it to life, activate the `Mannequin` child inside the object. This will spawn the enemy and automatically disable the `MannequinPoser` child, so you don't need to worry about that.
