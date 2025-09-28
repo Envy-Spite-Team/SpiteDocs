@@ -10,15 +10,13 @@ Rewrite:
 	Delayed Level Start
 	Custom Terminal Entry
 Write:
-	Information
 	Challenges
-	Custom Scripts
 	Custom Assets
 	Contribution
 
 
 Fix:
-	Website not working
+
 Add:
 	More/Update images
 	
