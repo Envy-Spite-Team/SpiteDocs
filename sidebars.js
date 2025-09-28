@@ -17,7 +17,6 @@
 const sidebars = {
         tutorialSidebar: [
         'intro',
-        'navmesh-test',
         {
             type: 'category',
             label: 'Setup',
@@ -37,6 +36,7 @@ const sidebars = {
                 'Tutorials/Arenas And Enemies',
                 'Tutorials/Texturing',
                 'Tutorials/Music',
+                'Tutorials/NavMesh',
                 'Tutorials/Object Activator',
                 'Tutorials/ULTRAKILL Event',
                 'Tutorials/Optimization',

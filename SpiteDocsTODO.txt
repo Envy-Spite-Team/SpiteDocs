@@ -30,5 +30,3 @@ fix:
 update:
 	Organization
 	Divide adv guides and components from tutorial
-add:
-	Update tracking in blog section
