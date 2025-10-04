@@ -16,12 +16,12 @@ You should also mark your floors and ceilings as `Floor`, your walls as `Walls` 
 
 The way navigation and navmeshes are made has been changed recently as of the ULTRA_REVAMP update. Now, you will need an empty object not parented to anything named `Navigation`.
 
-![An object named "Navigation" in the scene](./images/New/Tutorials/NavMesh/NavigationObj.png)
+![An object named "Navigation" in the scene](../images/New/Tutorials/NavMesh/NavigationObj.png)
 
 This object will need the component `NavMeshSurface`. However, make sure to assign the `NavMeshModifier` component to any floor you want your enemies to walk on.
 Then, go back to the `NavMeshSurface` component in your `Navigation`, open `Object Collection` and change `Collect Objects` to `NavMeshModifier Component Only`.
 
-![NavMeshSurface component](./images/New/Tutorials/NavMesh/NavMeshSurfaceComp.png)
+![NavMeshSurface component](../images/New/Tutorials/NavMesh/NavMeshSurfaceComp.png)
 
 :::note
 There is an alternate way to do this. Instead of adding a `NavMeshModifier` to every floor you want to use, you can instead do the opposite and only add it to things you want the NavMesh to completely ignore when baking, like a trigger box. To do this, set the `Collect Objects` value in the `Navigation` object to `All Game Objects`, and then for any object you want to treat as not existing when baking, add a `NavMeshModifier` and set the `Mode` to `Remove object`.
