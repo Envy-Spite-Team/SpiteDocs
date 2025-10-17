@@ -50,17 +50,7 @@ const config = {
           editUrl:
             'https://github.com/Envy-Spite-Team/SpiteDocs',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -86,7 +76,6 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
             label: 'GitHub',
@@ -122,10 +111,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
