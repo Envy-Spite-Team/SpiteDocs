@@ -11,20 +11,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   trailingSlash: false,
-  title: 'Spite LE Docs',
-  tagline: 'Official Spite LE Documentation',
+  title: 'Solaris Docs',
+  tagline: 'Level Creation Documentation',
   favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://envy-spite-team.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/SpiteDocs/',
+  baseUrl: '/SolarisDocs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Envy-Spite-Team', // Usually your GitHub org/user name.
-  projectName: 'SpiteDocs', // Usually your repo name.
+  projectName: 'SolarisDocs', // Usually your repo name.
   deploymentBranch: 'pages-deploy',
 
   onBrokenLinks: 'throw',
@@ -44,11 +44,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Envy-Spite-Team/SpiteDocs',
+            'https://github.com/Envy-Spite-Team/SolarisDocs',
         },
         blog: false,
         theme: {
@@ -64,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/ens-social.png',
       navbar: {
-        title: 'Spite Docs',
+        title: 'Solaris Docs',
         logo: {
           alt: 'logo',
           src: 'img/logo.png',
@@ -99,11 +100,11 @@ const config = {
             title: 'Community & Help',
             items: [
               {
-                label: 'Discord',
+                label: 'Envy & Spite Discord Server',
                 href: 'https://discord.gg/KqK5yDsRjQ',
               },
               {
-                label: 'YouTube',
+                label: 'Envy & Spite YouTube Channel (Abandoned)',
                 href: 'https://www.youtube.com/@EnvySpite'
               }
             ],
@@ -112,13 +113,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
+                label: 'GitHub Repository',
                 href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Envy and Spite Team, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Solaris Docs Team, Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

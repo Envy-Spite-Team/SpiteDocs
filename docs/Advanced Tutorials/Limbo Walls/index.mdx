@@ -1,0 +1,23 @@
+Limbo Walls now display a real location in the level. If you're familiar with how the 3D Skybox works in Source games, this should be familiar to you.
+
+Firstly, make your fake environment that will be displayed on the walls. Put it somewhere out of bounds. The scale ratio is **1:16**.
+
+Add a Skybox Sphere around your fake environment. This is so the outside of the level itself can't be seen from the skybox. To make one, just make a ProBuilder sphere, invert the normals, and add a Skybox material onto it. (Did you know you can apply Skybox materials to normal objects? You do now!)
+
+Now, add a Camera to your fake environment, with the following settings:
+- Clear Flags: **Solid Color** (required so your skybox sphere renders, it won't render if the camera's already rendering a skybox)
+- Clipping Planes: **Near 0.1 Far 1000** (feel free to adjust as necessary)
+
+Remove the `AudioListener` component from the Camera.
+
+Add a `LimboSkybox` component to the Camera. This will handle everything to do with matching the Camera to the player view.
+
+Create two Empties, the *Player Start* and the *Fake Cam Start*.
+
+How the `LimboSkybox` component matches the location is simple: It takes the *distance between the player and the Player Start*, divides it by 16, then sets the camera's position to *Fake Cam Start + that distance*. The further the player moves from the *Player Start*, the further the Camera moves from the *Fake Cam Start*, at 1:16 scale.
+
+Now, for the walls themselves: They simply have the Screen Field material from Environment/Layer 1. That's all that's needed for the rendering! For the buzz when the player touches the wall, add a `PlayerDistanceDecal` set to the `Screen Buzz` prefab. Walls have PSX texture warping applied to them at all times, so remember to add edge loops.
+
+That's it! Have fun making smokes and mirrors for your ULTRAKILL level!
+
+TODO: Update this page to be properly formatted to the standard of this docs and add more information.

@@ -5,40 +5,36 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Fully public',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+
     description: (
       <>
-        Envy & Spite project is public to everyone and the software is available on GitHub
+        Solaris Documentation project is public to everyone and the software is available on GitHub
       </>
     ),
   },
   {
-    title: 'Learn hgow to create levels',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Learn how to create levels',
+
     description: (
       <>
-        Here you will learn how to create levels for ULTRTAKILL from start to finish!
+        Here you will learn how to create levels for ULTRAKILL from start to finish!
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Aimed towards simplicity',
+
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The documentation was made to be understandable by everyone. Both new creators and veterans of Rude LE.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
