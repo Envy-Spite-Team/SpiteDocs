@@ -40,7 +40,7 @@ const sidebars = {
                 'Tutorials/Object Activator',
                 'Tutorials/ULTRAKILL Event',
                 'Tutorials/Optimization',
-                'Tutorials/Compiling'
+                'Tutorials/Compiling/index'
             ]
         },
         {

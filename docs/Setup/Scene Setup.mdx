@@ -2,18 +2,21 @@
 title: Scene Setup
 sidebar_position: 2
 ---
-# Scene Setup
 
 ## Getting started
 
-Each ULTRAKILL level must have certain objects and scripts in order to work properly. For example: `StatsManager`, `Event System` and etc.
 
-Let's get started by first creating a new scene in Spite and from there we will explain what each one of 
+
+Let's get started by first creating a new scene in Rude and from there we will explain what each one of 
 them does.
 
-Start by pressing the Spite button in the toolbar and hit `New Level`. Give names to the scene and doomah file, and preferably, check the `Auto create level folder in assets`  for organization.
+In Rude, each level must be inside of a bundle. Bundles can contain more than 1 level and gives the ability to create campaigns. Start by pressing the Rude button in the toolbar and hit `Rude Exporter`, create a new bundle, set a name for the bundle, an author name(your name) and a thumbnail(you can use level thumbnails from the game). If you want, you can set a custom name for the levels folder. After that, press `Create Bundle`.
+
+After creating a bundle, you can create the level itself. Press the `Create new level`. When hovering on the level button, there will be `Modify` and `Open Scene` buttons. Go to the `Modify` menu and set a unique ID for the level. In there you can also change the name of the level and the thumbnail. After that you can go back and finally open the levels scene.
 
 ## StatsManager
+
+Each ULTRAKILL level must have certain objects and scripts in order to work properly. For example: `StatsManager`, `Event System` and etc. Let's start with `StatsManager`.
 
 <div style={{ textAlign: "center" }}>
 	<img src="https://github.com/layzyidiot/e-sw/blob/main/images/Image_004.png?raw=true" alt="StatsManager Tab" width="45%" height="45%" ></img>
@@ -43,7 +46,7 @@ Essentially, Using an image hosting website like https://imgbb.com/ , you can up
 	<img src="https://github.com/layzyidiot/e-sw/blob/main/images/Image_009.png?raw=true" alt="First room Tab" width="45%" height="45%" ></img>
 </div>
 
-This is by far the most important gameobject in the scene, as it contains the player. You may be inclined to use the direct prefab of the first room but it requires some tweaks before it can be used due to containing missing scripts.
+This is by far the most important gameobject in the scene, as it contains the player. You may be inclined to use the direct prefab of the first room but it is broken and requires some tweaks before it can be used due to containing missing scripts.
 
 ## FinalRoom
 

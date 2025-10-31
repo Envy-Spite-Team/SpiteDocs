@@ -6,26 +6,24 @@ sidebar_position: 4
 
 Checkpoints are very important, as they let the player to start from a certain point in the level, rather than forcing to restart from start. However, they require a certain configuration in order to work properly and can bre confusing at a first glance. In this page you will learn how to properly set them up.
 
+There are 2 types of checkpoints: Non-Reusable and Reusable. Reusable checkpoints can be used multiple times(for example: 4-2). Checkpoints can be found in `ULTRAKILL Assets/Prefabs/Level/(Checkpoint.prefab or CheckpointReuseable.prefab)`
+
 ## Setup
 
 :::note
 Here, a big part of the checkpoint settings will be skipped since they are rarely used. Instead, we will focus on the most used and required settings.
 :::
 
-As said before in this tutorial, you should have at least 3 rooms with geometry. Place a checkpoint in the enterance of the second room. In the checkpoint component, you will see a lot of stuff, for this tutorial we will need only 2 fields. These are: `To Activate` and `Rooms To Inherit`. Here are the explanations of what they do:
-
-1. To Activate: Any object that is placed in that field will be activated when the checkpoint is hit. This is usually used for activating rooms that were disabled for optimization purpouses(this is what we will use it for), however, you can use it for more advanced level logic.
-2. Rooms To Inherit: Rooms that are placed inside of this field *will remain active and will not be reset*. Keep this in mind, as this has caused a lot of confusion for new level makers in the past.
-
-Lets place the third room in the `To Activate` field and `Non-Stuff` of the first and second rooms in `Rooms To Inherit`.
+1. To Activate: Any object that is placed in that field will be activated when the checkpoint is hit. This is usually used for activating rooms that were disabled for optimization purposes, however, you can use it for more advanced level logic.
+2. Rooms To Inherit: Everything in `Rooms To Inherit` is saved when the checkpoint is hit. Use this for... most stuff, really..
+3. Rooms: Everything in Rooms is saved immediately upon level load. Use this for stuff that can't possibly be affected before hitting the checkpoint. Reusable checkpoints likely won't make much use of Rooms.\
+4. Doors To Unlock: Unlocks doors after the player respawns. Set `Doors To Unlock` to unlock any doors to enemy arenas where you could have reloaded the checkpoint. Otherwise, the player won't be able to get back to the arena(or any other place of death).
 
 :::caution
- For `Rooms To Inherit`, it is recommended to use only `Non-Stuff`, as placing the whole room in there will not deactivate enemies that are in these rooms. If your room does not have any enemies inside, it is safe to put the whole room in the field.
+ For `Rooms To Inherit`, it is recommended to use only `Stuff`, as placing the whole room in there will not deactivate enemies that are in these rooms. If your room does not have any enemies inside, it is safe to put the whole room in the field.
 :::
 
 Now, when the checkpoint is hit and player dies, it will reset the wave and the room will stay.
-
-TODO: This is misleading, check tundra wiki and fix this shit.
 
 ## Functionality
 <img align="right" src="https://coolboi21.github.io/Rude-Docs/Tutorials/Beginner/assets/creating-checkpoints-checkpoint-settings.png" 
