@@ -114,7 +114,7 @@ const config = {
             items: [
               {
                 label: 'GitHub Repository',
-                href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
+                href: 'https://github.com/Envy-Spite-Team/SolarisDocs',
               },
             ],
           },
