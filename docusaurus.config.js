@@ -78,7 +78,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/Envy-Spite-Team/SpiteDocs',
+            href: 'https://github.com/Envy-Spite-Team/SolarisDocs',
             label: 'GitHub',
             position: 'right',
           },
