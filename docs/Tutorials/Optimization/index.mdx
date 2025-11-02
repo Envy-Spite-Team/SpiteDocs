@@ -8,20 +8,20 @@ sidebar_position: 9
 
 Maps can be quite heavy for some PCs to run, especially if they are big and open. So you need to optimize them in order to create a smooth experience. Here you will learn how to do that.
 
-## Disactivating rooms
+## Deactivating rooms
 
-All official ULTRAKILL maps use this way of optimization. It works by simply disactivating rooms and activating them only when the player enters neighboring rooms.
+All official ULTRAKILL maps use this way of optimization. It works by simply deactivating rooms and activating them only when the player enters neighboring rooms.
 
 ![0-2 Disabled](0-2_disabled.png)
 
-'Door' component can act as an object activator. There are 2 tabs, for activating and disactivating rooms.
+'Door' component can act as an object activator. There are 2 tabs, for activating and deactivating rooms.
 
 ><p align="center">--IMPORTANT NOTE--</p>
 >
->	For a smooth transition between rooms it's better to have 3 rooms activated at once (i.e. one behind the player, one in front of the player, and the room with the player). And the room that is disactivated must be the one that is 1 room behind the player. 
+>	For a smooth transition between rooms it's better to have 3 rooms activated at once (i.e. one behind the player, one in front of the player, and the room with the player). And the room that is deactivate must be the one that is 1 room behind the player. 
 >
 >Like this:
-><p align="center"><img src="https://github.com/layzyidiot/e-sw/blob/main/images/door-with-rooms.png?raw=true" alt="door" width="50%" height="50%" ></img></p>
+>![Door-with-rooms]
 
 :::warning
 Try not to create an excessive amount of faces, edges, and vertices as it will decrease the performance of the level.

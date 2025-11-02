@@ -7,4 +7,4 @@ This website is built using [Docusaurus](https://docusaurus.io/).
 Website link: https://envy-spite-team.github.io/SpiteDocs/
 
 > [!NOTE]
-> The docs are in constant change. The name can be changed from time to time.
+> The docs are in constant change. The name of this documentation is also temporary.

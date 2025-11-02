@@ -4,4 +4,39 @@ title: Custom Scripts
 
 # Custom Scripts
 
-waiting for info...
+Custom scripts are a powerful way of doing unique and complex stuff in your level that are either too difficult to accomplish with present scripts or impossible to do so. With custom scripts you can control your level and the game itself(partially) however you want.
+
+# Prerequisites
+
+<ul>
+    <li>Knowledge of C# programming language and Unity API:</li>
+    <ul>
+        <li><b><a href="https://learn.microsoft.com/en-us/dotnet/csharp/#reference">C# Documentation</a></b></li>
+        <li><b><a href="https://docs.unity3d.com/2022.3/Documentation/ScriptReference"></a>Unity 2022 API Documentation</b></li>
+    </ul>
+    <li><b><a href="https://c2rsetup.officeapps.live.com/c2r/downloadVS.aspx?sku=community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030:80bd5459bf8341a2b1bb579c798e9abf">Visual Studio 2022(Windows Only)</a></b></li>
+    <li>BepInEx Templates(if not installed, run `dotnet new -i BepInEx.Templates --nuget-source https://nuget.bepinex.dev/v3/index.json` in the command line)</li>
+    <li>BepInEx nuget source(run `dotnet nuget add source https://nuget.bepinex.dev/v3/index.json --name Bepinex` in the command line)</li>
+    <li><b><a href={require('./UltrakillProject-16d.zip')}>ULTRAKILL Custom Scripts Template</a></b></li>
+</ul>
+
+:::note
+You are not restricted to use Visual Studio 2022 specifically. If you wish, or if you are on other non-Windows OS, you can use different C# IDE-s. For example <b><a href="https://www.jetbrains.com/rider/download/">Rider</a></b>. This page will assume you are using Visual Studio 2022. If thats not the case, you can refer to the documentation of your IDE regarding the installation of templates and compiling into .dll files.
+
+<div style={{fontSize: '8px',}}>Solaris Docs and Envy & Spite projects are not sponsored by Microsoft Corporation or JetBrains Foundation in any way.</div>
+:::
+
+# Creating the projects
+
+Extract the ULTRAKILL Custom Scripts Template zip file(listed above) into the `C:\Users\{User Name}\Documents\Visual Studio 2022\Templates\ProjectTemplates` directory(may wary depending on what IDE you are using, in that case refer to the documentation of that IDE regarding the installation of project templates). Close your IDE if its open. Afterwards create a new project using the template and create your scripts.
+
+:::warning
+- Do not use BepInEx types as fields (even if static) in unity scripts (like MonoBehavior or ScriptableObject). Put them in another class instead. For example, if you want to patch a method create a static method to contain the Harmony object and patch methods
+- Do not derive from UnityPlugin
+:::
+
+After you are done, compile the scripts into a .dll file(`CTRL+Shift+B` hotkey). Your .dll file will be placed in the `bin` folder. Copy it into the `Rude\Assets\RudeScripts` and `{Game folder or profile folder(if using a mod manager)}\BepInEx\plugins\EternalsTeam-AngryLevelLoader\AngryLevelLoader\Scripts` directories. Now compile the level and test your scripts!
+
+:::warning
+DO NOT create or add any script files (.cs) directly into rude. This will break rude. Instead, create a .dll file using the section above, and add it to your `RudeScripts` folder. This will make it appear as a component that can be added to objects.
+:::
