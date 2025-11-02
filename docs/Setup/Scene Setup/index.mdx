@@ -5,8 +5,6 @@ sidebar_position: 2
 
 ## Getting started
 
-
-
 Let's get started by first creating a new scene in Rude and from there we will explain what each one of 
 them does.
 
@@ -19,7 +17,7 @@ After creating a bundle, you can create the level itself. Press the `Create new 
 Each ULTRAKILL level must have certain objects and scripts in order to work properly. For example: `StatsManager`, `Event System` and etc. Let's start with `StatsManager`.
 
 <div style={{ textAlign: "center" }}>
-	<img src="StatsManager.png" alt="StatsManager Tab" width="45%" height="45%" ></img>
+	<img src={require('./assets/StatsManager.png').default} alt="StatsManager Tab" width="45%" height="45%" ></img>
 </div>
 
 This is `StatsManager`. It defines ranks and secrets for the level. The ranks are defined in an ascending order, from the top to bottom(D at the top and S at the bottom). In the `Secret Objects` tab, secret orbs(bonuses) are defined. This works only with objects defined as Bonus. Inside of the gameobject you can find MusicManager, you will learn more about it by proceeding further into the tutorial.
@@ -31,7 +29,7 @@ The level number must be set to -1 to open the tab menu to see rankings, time, e
 ## StockMapInfo
 
 <div style={{ textAlign: "center" }}>
-	<img src="StockMapInfo.png" alt="StockMapInfo Tab" width="45%" height="45%" ></img>
+	<img src={require('./assets/StockMapInfo.png').default} alt="StockMapInfo Tab" width="45%" height="45%" ></img>
 </div>
 
 This is `StockMapInfo`, You can think of it as an extension of `StatsManager`, The key difference is it's only used for visual information about the level such as the level layer and level name that appears when coming out of the hellevator, It also shows the level name from the tab menu in the `Large Text` field, Another thing is the `Large Image` field which is used by the game's discord RPC system.
@@ -43,7 +41,7 @@ Essentially, Using an image hosting website like https://imgbb.com/ , you can up
 ## FirstRoom
 
 <div style={{ textAlign: "center" }}>
-	<img src="FirstRoom.png" alt="First room Tab" width="45%" height="45%" ></img>
+	<img src={require('./assets/FirstRoom.png').default} alt="First room Tab" width="45%" height="45%" ></img>
 </div>
 
 This is by far the most important gameobject in the scene, as it contains the player. You may be inclined to use the direct prefab of the first room but it is broken and requires some tweaks before it can be used due to containing missing scripts.
@@ -51,7 +49,7 @@ This is by far the most important gameobject in the scene, as it contains the pl
 ## FinalRoom
 
 <div style={{ textAlign: "center" }}>
-	<img src="FinalRoom.png" alt="FinalDoor Tab" width="100%" height="100%" ></img>
+	<img src={require('./assets/FinalRoom.png').default}alt="FinalDoor Tab" width="100%" height="100%" ></img>
 </div>
 The difference between final room and first room is the fact that final room allows you to use its direct prefab, which means you can easily add custom stuff there.
 
@@ -64,7 +62,7 @@ Do not be alarmed that the final room has no pit, upon the activation of the gam
 ## EventSystem
 
 <div style={{ textAlign: "center" }}>
-	<img src="EventSystem.png" alt="EventSystem Tab" width="45%" height="45%" ></img>
+	<img src={require('./assets/EventSystem.png').default} alt="EventSystem Tab" width="45%" height="45%" ></img>
 </div>
 
 Event System is an object that is used for internal purposes in ULTRAKILL. It is not intended to be changed. *Do not touch it unless you know what you are doing.*
